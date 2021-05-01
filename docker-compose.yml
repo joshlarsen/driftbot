@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  chrome:
+    image: browserless/chrome:1-puppeteer-8.0.0
+    restart: unless-stopped
+    ports:
+      - '3333:3000'
+    environment:
+      MAX_CONCURRENT_SESSIONS: 1
+      CONNECTION_TIMEOUT: 30000
+      DEFAULT_STEALTH: "true"

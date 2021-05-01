@@ -1,0 +1,14 @@
+{
+  "name": "driftbot",
+  "version": "1.0.0",
+  "description": "Web app software supply chain monitor",
+  "author": "Josh Larsen (https://github.com/joshlarsen/)",
+  "homepage": "https://driftbot.io",
+  "main": "bot.js",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^18.5.3",
+    "esprima": "^4.0.1",
+    "puppeteer-core": "^9.0.0"
+  }
+}

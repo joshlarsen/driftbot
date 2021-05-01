@@ -1,0 +1,27 @@
+name: check-site
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'authorized_hosts.json'
+  schedule:
+    - cron: '5 */6 * * *'
+
+jobs:
+  check-site:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Docker Compose Up
+        run: docker-compose up -d
+      - name: Install Node Packages
+        run: yarn
+      - name: Run Bot
+        run: node driftbot.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OBFUSCATION_LIMIT_PERCENT: 25.0
+          SUSPICIOUS_CALLS: eval,btoa,atob
+          PAGE_TIMEOUT: 5000
