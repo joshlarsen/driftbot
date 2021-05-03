@@ -7,6 +7,9 @@
 const puppeteer = require('./js/puppeteer')
 const handlers = require('./js/handlers')
 const timeout = process.env.PAGE_TIMEOUT || 10000
+const site = process.env.SITE_URL || 'https://driftbot.io'
+
+if (!site) process.exit(1)
 
 ;
 (async () => {
@@ -21,11 +24,11 @@ const timeout = process.env.PAGE_TIMEOUT || 10000
   /* end browser session setup */
 
   /* start single page example */
-  await page.goto("https://driftbot.io/");
+  await page.goto(site);
   /* end single page example */
 
   /* start multi-page example - record with Chrome dev tools recorder */
-  // await page.goto("https://www.atoms.com/");
+  // await page.goto(site);
   /* end multi-page example */
 
   /* DO NOT EDIT - close session and run final analysis */

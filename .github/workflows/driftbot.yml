@@ -22,6 +22,7 @@ jobs:
         run: node driftbot.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SITE_URL: 'https://driftbot.io'
           OBFUSCATION_LIMIT_PERCENT: 25.0
           SUSPICIOUS_CALLS: eval,btoa,atob
           PAGE_TIMEOUT: 5000

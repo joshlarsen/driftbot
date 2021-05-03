@@ -36,13 +36,19 @@ Prerequisites:
 If you'd like to test locally, make sure the headless browser container is running:
 
 ```
-docker-compose up
+$ docker-compose up
 ```
 
-Then, in another terminal, run the bot to test output:
+In another terminal, create an empty `authorized_hosts.json` file.
 
 ```
-node driftbot.js
+$ cp authorized_hosts.json.sample authorized_hosts.json
+```
+
+Then run the bot to test output:
+
+```
+$ SITE_URL=https://mysite.com node driftbot.js
 ```
 
 Note that no GitHub Issues are created when running locally.

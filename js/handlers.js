@@ -89,11 +89,12 @@ function console_(msg) {
  */
 async function close() {
   const github = process.env.GITHUB_TOKEN
-  const file = fs.existsSync('./authorized_hosts.json')
+  const path = './authorized_hosts.json'
+  const file = fs.existsSync(path)
 
   if (!file) return
 
-  const data = fs.readFileSync(file)
+  const data = fs.readFileSync(path)
   const hosts = JSON.parse(data)
   const report = {}
   const baseline = Object.values(hosts).some(h => h.length > 0)
@@ -116,7 +117,7 @@ async function close() {
   await _handleIssues(report, github, baseline)
 
   // output recommendations for an initial baseline config
-  if (!baseline) _recommendations(report, file)
+  if (!baseline) _recommendations(report, path)
 }
 
 /*

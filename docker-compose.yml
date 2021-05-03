@@ -9,4 +9,4 @@ services:
     environment:
       MAX_CONCURRENT_SESSIONS: 1
       CONNECTION_TIMEOUT: 30000
-      DEFAULT_STEALTH: "true"
+      DEFAULT_STEALTH: 'true'
