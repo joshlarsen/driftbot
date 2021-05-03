@@ -55,7 +55,7 @@ Note that no GitHub Issues are created when running locally.
 
 ## Kudos
 
-Driftbot is a simple project, but mainly because of the amazing work by the authors and of these projects:
+Driftbot is a simple project, due in large part to the amazing work by the authors of these projects:
 
 - [Puppeteer](https://github.com/puppeteer/puppeteer)
 - [Browserless](https://github.com/browserless/chrome)
