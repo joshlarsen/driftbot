@@ -4,7 +4,7 @@
   "description": "Web app software supply chain monitor",
   "author": "Josh Larsen (https://github.com/joshlarsen/)",
   "homepage": "https://driftbot.io",
-  "main": "bot.js",
+  "main": "driftbot.js",
   "license": "MIT",
   "dependencies": {
     "@octokit/rest": "^18.5.3",
