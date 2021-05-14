@@ -1,8 +1,0 @@
-{
-  "script_hosts": [],
-  "xhr_hosts": [],
-  "websocket_hosts": [],
-  "webworker_hosts": [],
-  "obfuscated_script_hosts": [],
-  "suspicious_script_hosts": []
-}
