@@ -7,7 +7,7 @@
   "main": "driftbot.js",
   "license": "MIT",
   "dependencies": {
-    "@octokit/rest": "^18.5.3",
+    "@octokit/rest": "^18.5.6",
     "esprima": "^4.0.1",
     "puppeteer-core": "^9.0.0"
   }
